@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.hotelreservation.RoomServiceController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-padding: 20; -fx-background-color: #f8f8ff;">
+
+    <!-- Room Cleaning Info -->
+    <Label text="This is the Room Cleaning Window"
+           style="-fx-font-size: 18px; -fx-font-style: italic; -fx-text-fill: #555;"/>
+
+    <!-- Room Service Request Section -->
+    <Label text="Room Service Request"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <TextArea fx:id="roomServiceRequest"
+              promptText="Enter your room service request here..."
+              prefHeight="200"
+              wrapText="true"/>
+    <Button text="Submit Request"
+            onAction="#handleSubmitRoomService"/>
+    <Button text="Back to Services"
+            onAction="#handleBackToServices"/>
+
+</VBox>

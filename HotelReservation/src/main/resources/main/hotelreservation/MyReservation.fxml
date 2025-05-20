@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.hotelreservation.MyReservationsController"
+            stylesheets="/styles/login.css">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT"
+              style="-fx-background-color: #f0f0f0; -fx-padding: 20;">
+            <Label text="My Reservations" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 30;">
+            <TableView fx:id="reservationsTable" prefHeight="500" prefWidth="800">
+                <columns>
+                    <TableColumn fx:id="roomColumn" text="Room Type" prefWidth="200"/>
+                    <TableColumn fx:id="checkInColumn" text="Check-In Date" prefWidth="150"/>
+                    <TableColumn fx:id="checkOutColumn" text="Check-Out Date" prefWidth="150"/>
+                    <TableColumn fx:id="nightsColumn" text="Nights" prefWidth="100"/>
+                    <TableColumn fx:id="totalColumn" text="Total (₱)" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Back to Lobby" onAction="#handleBack" prefWidth="200"/>
+                <Button text="Cancel Reservation" onAction="#handleCancelReservation" prefWidth="200"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

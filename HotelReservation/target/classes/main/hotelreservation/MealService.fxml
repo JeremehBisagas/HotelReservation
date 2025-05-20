@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-font-family: Arial; -fx-background-color: cyan; -fx-padding: 30;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.hotelreservation.MealServiceController">
+
+    <!-- Top Title -->
+    <top>
+        <Label style="-fx-font-size: 36px; -fx-font-weight: bold;" text="Room Service Menu" BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Center Section -->
+    <center>
+        <HBox alignment="TOP_CENTER" spacing="40">
+
+            <!-- Food Menu -->
+            <VBox alignment="TOP_LEFT" spacing="20">
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Menu" />
+                <VBox spacing="10">
+
+                    <!-- Food Items -->
+                    <!-- Repeat block for each food item -->
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/pancakes.jpg" /></image>
+                        </ImageView>
+                        <Label text="Pancakes - ₱85.99" />
+                        <Spinner fx:id="qtyPancakes" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderPancakes" text="Order" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/omelette.jpg" /></image>
+                        </ImageView>
+                        <Label text="Omelette - ₱109.49" />
+                        <Spinner fx:id="qtyOmelette" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderOmelette" text="Order" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/caesar_salad.jpg" /></image>
+                        </ImageView>
+                        <Label text="Caesar Salad - ₱130.49" />
+                        <Spinner fx:id="qtyCaesarSalad" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderCaesarSalad" text="Order" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/club_sandwich.jpg" /></image>
+                        </ImageView>
+                        <Label text="Club Sandwich - ₱55.99" />
+                        <Spinner fx:id="qtyClubSandwich" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderClubSandwich" text="Order" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/grilled_salmon.jpg" /></image>
+                        </ImageView>
+                        <Label text="Grilled Salmon - ₱280.99" />
+                        <Spinner fx:id="qtyGrilledSalmon" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderGrilledSalmon" text="Order" />
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/steak.jpg" /></image>
+                        </ImageView>
+                        <Label text="Steak - ₱310.99" />
+                        <Spinner fx:id="qtySteak" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderSteak" text="Order" />
+                    </HBox>
+
+                </VBox>
+
+                <!-- Special Instructions -->
+                <Label style="-fx-font-size: 18px;" text="Special Instructions:" />
+                <TextArea fx:id="specialInstructionsTextArea" prefHeight="100" prefWidth="300" wrapText="true" />
+            </VBox>
+
+            <!-- Order Summary -->
+            <VBox alignment="TOP_LEFT" spacing="10">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Order Summary:" />
+                <TextArea fx:id="orderSummaryTextArea" editable="false" prefHeight="500" prefWidth="300" wrapText="true" />
+                <Label fx:id="totalPriceLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Total: ₱0.00" />
+            </VBox>
+
+            <!-- Drinks Menu -->
+            <VBox alignment="TOP_LEFT" spacing="20">
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Drinks" />
+                <VBox spacing="10">
+
+                    <!-- Water -->
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/water.jpg" />
+                     </image></ImageView>
+                        <Label text="Water - ₱25.00" />
+                        <Spinner fx:id="qtyWater" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderWater" text="Order" />
+                    </HBox>
+
+                    <!-- Wine -->
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/wine.jpg" /></image>
+                        </ImageView>
+                        <Label text="Wine - ₱199.99" />
+                        <Spinner fx:id="qtyWine" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderWine" text="Order" />
+                    </HBox>
+
+                    <!-- Tea -->
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/tea.jpg" /></image>
+                        </ImageView>
+                        <Label text="Tea - ₱45.00" />
+                        <Spinner fx:id="qtyTea" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderTea" text="Order" />
+                    </HBox>
+
+                    <!-- Coffee -->
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                            <image><Image url="@../../images/coffee.jpg" /></image>
+                        </ImageView>
+                        <Label text="Coffee - ₱60.00" />
+                        <Spinner fx:id="qtyCoffee" initialValue="1" max="20" min="1" prefWidth="60" />
+                        <Button onAction="#handleOrderCoffee" text="Order" />
+                    </HBox>
+                </VBox>
+            </VBox>
+
+        </HBox>
+    </center>
+
+    <!-- Bottom Buttons -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" BorderPane.alignment="CENTER">
+            <Button onAction="#handlePlaceOrder" style="-fx-background-color: #28a745; -fx-text-fill: white;" text="Place Order" />
+            <Button onAction="#handleReviewOrder" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Review Order" />
+            <Button onAction="#handleBackToServices" style="-fx-background-color: #6c757d; -fx-text-fill: white;" text="Back to Services" />
+        </HBox>
+    </bottom>
+</BorderPane>

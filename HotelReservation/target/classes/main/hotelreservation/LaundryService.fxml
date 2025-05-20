@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.hotelreservation.LaundryServiceController"
+      alignment="CENTER" spacing="20" style="-fx-padding: 30; -fx-background-color: #f8f8ff;">
+
+    <!-- Title -->
+    <Label text="Laundry Service"
+           style="-fx-font-size: 32px; -fx-font-weight: bold;"
+           alignment="CENTER"/>
+
+    <!-- Input Area -->
+    <TextArea fx:id="laundryDetailsTextArea"
+              promptText="Enter laundry details here..."
+              prefHeight="200"
+              prefWidth="400"/>
+
+    <!-- Instructions Label -->
+    <Label text="Instructions for Using Laundry Service:"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <!-- Instructions Text (read-only) -->
+    <TextArea editable="false"
+              wrapText="true"
+              prefHeight="200"
+              prefWidth="400">
+        <![CDATA[
+1. Check for Laundry Bag: Look for a laundry bag and price list in your hotel room. If you don’t find one, ask the front desk or housekeeping.
+
+2. Fill the Laundry Bag: Place your dirty clothes in the laundry bag. Check labels to ensure they can be laundered.
+
+3. Complete the Form: If provided, fill out the laundry request form. Include special instructions (e.g., 'delicate wash').
+
+4. Leave the Bag: Place it outside your room or take it to the front desk.
+
+5. Call for Service: You may also call housekeeping to request pickup.
+
+6. Wait for Return: Staff will notify you when your laundry is ready.
+
+7. Check Items: Ensure all items are returned and in good condition.
+        ]]>
+    </TextArea>
+
+    <!-- Buttons -->
+    <Button text="Submit Laundry Request"
+            onAction="#handleSubmitLaundry"
+            prefWidth="200"/>
+
+    <Button text="Back to Services"
+            onAction="#handleBackToServices"
+            prefWidth="200"/>
+
+</VBox>

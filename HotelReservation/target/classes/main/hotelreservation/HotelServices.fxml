@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-padding: 30; -fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.hotelreservation.HotelServicesController">
+
+    <!-- Title -->
+    <Label alignment="CENTER" style="-fx-font-size: 32px; -fx-font-weight: bold;" text="Hotel Services" />
+
+    <!-- Grid for Service Buttons -->
+    <GridPane alignment="CENTER" hgap="20" vgap="20">
+        <!-- Column & Row Constraints -->
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" />
+            <ColumnConstraints halignment="CENTER" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+
+        <!-- Buttons -->
+        <Button onAction="#handleLaundryService" prefHeight="75" prefWidth="200"
+                style="-fx-background-color: blue; -fx-text-fill: white;"
+                text="Laundry Service" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+        <Button onAction="#handleRoomCleaning" prefHeight="75" prefWidth="200"
+                style="-fx-background-color: blue; -fx-text-fill: white;"
+                text="Room Cleaning" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Button onAction="#handleMealService" prefHeight="75" prefWidth="200"
+                style="-fx-background-color: blue; -fx-text-fill: white;"
+                text="Meal Service" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    </GridPane>
+
+    <!-- Back to Lobby Button -->
+    <Button onAction="#handleBackToLobby" prefWidth="300" style="-fx-font-size: 18px;" text="Back to Lobby" />
+</VBox>

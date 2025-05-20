@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.hotelreservation.LoginController">
+    <tabs>
+        <!-- Login Tab -->
+        <Tab text="Login">
+            <GridPane alignment="CENTER" hgap="20" style="-fx-font-family: 'Arial'; -fx-background-color: black; -fx-padding: 50;" vgap="20">
+
+                <Label style="-fx-font-size: 36px; -fx-font-weight: bold;" text="Hotel Del Luna" textFill="#e1dfdf" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+
+                <Label text="Username:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="usernameField" promptText="Enter your username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Password:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <PasswordField fx:id="passwordField" promptText="Enter your password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Button onAction="#onLoginButtonClick" prefWidth="150" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label fx:id="errorMessage" style="-fx-text-fill: red;" text="" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </Tab>
+
+        <!-- Register Tab -->
+        <Tab text="Register">
+            <GridPane alignment="CENTER" hgap="15" style="-fx-padding: 40; -fx-background-color: black; -fx-font-family: 'Arial';" vgap="15">
+
+                <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="Register" textFill="GREY" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+
+                <Label text="Username:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="registerUsernameField" promptText="Enter username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Mobile Number:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="mobileField" promptText="09XXXXXXXXX" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Email Address:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="emailField" promptText="you@example.com" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Full Name:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="fullNameField" promptText="Your full name" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Password:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <PasswordField fx:id="registerPasswordField" promptText="Enter password" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label text="Confirm Password:" textFill="GREY" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <PasswordField fx:id="registerConfirmPasswordField" promptText="Confirm password" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Button onAction="#onRegisterSubmitClick" prefWidth="150" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <Label fx:id="registerMessage" style="-fx-text-fill: red;" text="" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </Tab>
+    </tabs>
+</TabPane>
